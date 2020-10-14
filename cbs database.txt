@@ -1,0 +1,90 @@
+-- create database
+
+create database cbs;
+
+-- use this database
+
+use cbs;
+
+-- create table for signup class
+
+create table account(username varchar(30), name varchar(40), password varchar(30), question varchar(100), answer varchar(50));
+
+
+-- create table to add new customer in new customer class
+
+create table customer(username varchar(30), id_type varchar(20), number varchar(20), name varchar(30), gender varchar(15), country varchar(20), address varchar(50), phone varchar(20), email varchar(40));
+
+
+-- create table to book intracity cabs
+
+ create table intracity(source varchar(30), destination varchar(30), driver varchar(30), car varchar(30), price varchar(20));
+
+-- insert some values in intracity table
+
+insert into intracity values("India Gate", "Red Fort", "Mike", "Toyota Fortuner", "420");
+
+insert into intracity values("Red Fort", "Cannuaght Palace", "Rob", "BMW X1", "420");
+
+insert into intracity values("Raj Bhawan", "Jama Masjid", "Tyson", "Toyota Corolla", "286");
+
+insert into intracity values("Mukharjee Nagar", "Old Delhi Railway Station", "Bob", "Hyundai Centro", "370");
+
+insert into intracity values("Sarojini Nagar", "Chandni Chowk", "John", "Maruti Suzuki Swift", "540");
+
+
+--create table to book intracity cabs
+
+create table intraCab(username varchar(30), name varchar(30), src varchar(30), dst varchar(30), car varchar(30), price varchar(30), ref varchar(30));
+
+-- create table to book intercity cabs
+
+create table intercity(source varchar(40), destination varchar(40), type varchar(20), driver varchar(40), car varchar(40), price varchar(20));
+
+-- insert some values in intercity table
+
+insert into intercity values("Delhi", "Agra", "Micro", "Tom", "Hyundai Eon", "420");
+
+insert into intercity values("Delhi", "Agra", "Mini", "Mike", "Honda Civic", "380");
+
+insert into intercity values("Delhi", "Agra", "SUV", "Micheal", "Toyota Fortuner", "600");
+
+ insert into intercity values("Mumbai", "Pune", "SUV", "Rosh", "Mahindra XUV", "810");
+
+insert into intercity values("Mumbai", "Pune", "Mini", "Sam", "Nissan Micra", "600");
+
+ insert into intercity values("Mumbai", "Pune", "Micro", "Samuel", "Datson Go", "550");
+
+insert into intercity values("Bangalore", "Chennai", "Micro", "Jane", "Maruti Suzuki WagonR", "1100");
+
+ insert into intercity values("Bangalore", "Chennai", "Mini", "Ray", "Maruti Suzuki Swift", "1350");
+
+insert into intercity values("Bangalore", "Chennai", "SUV", "Arsh", "Tata Safari", "1800");
+
+
+-- create table to store information about booked cabs
+
+ create table interCab(username varchar(30), name varchar(30), source varchar(30), destination varchar(30), type varchar(20), driver varchar(30), car varchar(30), price varchar(30), ref varchar(30));
+
+-- create table for transport
+
+ create table transport(source varchar(30), destination varchar(30), dname varchar(30), truck varchar(30), distance varchar(30), price varchar(30));
+
+-- insert some values in transport table
+
+insert into transport values("India Gate", "Red Fort", "Mike", "Tata Ace", "75 KM", "700");
+
+insert into transport values("Red Fort", "Jama Masjid", "Sam", "Kama 8 Ton Cargo", "57 KM", "670");
+
+insert into transport values("Raj Bhawan", "Cannuaght Palace", "Tom", "Mahindra Jeeto X7", "81 KM", "1110");
+
+insert into transport values("Mukharjee Nagar", "Old Delhi Railway Station", "Michael", "Maruti Suzuki SLV", "37 KM", "567");
+
+insert into transport values("Sarojini Nagar", "Chandni Chowk", "Samuel", "Mahindra Supro", "60 KM", "900");
+
+
+
+-- create table to insert transport values
+
+create table intransport(source varchar(30), destination varchar(30), name varchar(30), weight varchar(30), dname varchar(30), truck varchar(30), distance varchar(30), price varchar(30));
+
